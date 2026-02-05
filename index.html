@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>순무 육종 자원 관리 시스템</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; border: 1px solid #ddd; border-top: 5px solid #2c7a7b; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .header { background: #f8f9fa; padding: 15px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+        .header h1 { font-size: 20px; color: #333; margin: 0; }
+        
+        .content { padding: 20px; }
+        .section-title { font-size: 18px; font-weight: bold; color: #2c7a7b; border-left: 4px solid #2c7a7b; padding-left: 10px; margin: 20px 0 10px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; font-size: 14px; }
+        th { background-color: #f9f9f9; width: 25%; color: #555; }
+        
+        .image-box { display: flex; gap: 10px; margin-bottom: 20px; }
+        .image-placeholder { width: 50%; height: 250px; background: #eee; display: flex; align-items: center; justify-content: center; border: 1px dashed #ccc; color: #888; }
+        
+        .qr-area { text-align: center; border: 1px solid #eee; padding: 10px; width: 150px; }
+        .qr-area p { font-size: 12px; margin-top: 5px; color: #666; }
+
+        .btn-print { background: #2c7a7b; color: white; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px; }
+        .btn-print:hover { background: #285e5e; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>순무 자원 상세 정보</h1>
+        <button class="btn-print" onclick="window.print()">인쇄하기</button>
+    </div>
+
+    <div class="content">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div class="image-box" style="flex: 1;">
+                <div class="image-placeholder">순무 생육 사진 (잎)</div>
+                <div class="image-placeholder">순무 비대 사진 (뿌리)</div>
+            </div>
+            <div class="qr-area">
+                <img src="https://chart.googleapis.com/chart?chs=120x120&cht=qr&chl=BI-P-SD-KOAGI-97743" alt="QR코드">
+                <p>BI-P-SD-KOAGI-97743</p>
+            </div>
+        </div>
+
+        <div class="section-title">자원 기본 정보</div>
+        <table>
+            <tr>
+                <th>학명</th><td>Brassica rapa L.</td>
+                <th>자원분류</th><td>식물 (순무)</td>
+            </tr>
+            <tr>
+                <th>수집지역</th><td>경남 고성</td>
+                <th>수집일자</th><td>2026-01-29</td>
+            </tr>
+            <tr>
+                <th>정보제공기관</th><td>자체 육종 데이터</td>
+                <th>관리번호</th><td>97743</td>
+            </tr>
+        </table>
+
+        <div class="section-title">현장 특성조사 데이터 (AI 연동)</div>
+        <table>
+            <tr>
+                <th>잎 길이 (cm)</th><td>24.5</td>
+                <th>잎 너비 (cm)</th><td>12.2</td>
+            </tr>
+            <tr>
+                <th>잎 색상</th><td>진녹색</td>
+                <th>잎 모양</th><td>타원형</td>
+            </tr>
+            <tr>
+                <th>뿌리 길이 (cm)</th><td>15.8</td>
+                <th>뿌리 너비 (cm)</th><td>14.1</td>
+            </tr>
+            <tr>
+                <th>뿌리 색상</th><td>자색</td>
+                <th>뿌리 모양</th><td>편구형</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
